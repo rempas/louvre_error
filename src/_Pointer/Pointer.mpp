@@ -1,0 +1,15 @@
+module;
+
+#include <LPointer.h>
+
+export module Pointer;
+
+using namespace Louvre;
+
+export class Pointer final : public LPointer {
+public:
+    using LPointer::LPointer;
+
+    void pointerMoveEvent(const LPointerMoveEvent &event) override;
+    void pointerButtonEvent(const LPointerButtonEvent &event) override;
+};
