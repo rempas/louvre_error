@@ -1,3 +1,5 @@
+module;
+
 import Pointer;
 
 #include <LToplevelMoveSession.h>

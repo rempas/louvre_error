@@ -1,13 +1,13 @@
 add_rules("mode.debug", "mode.release")
 set_languages("c++20")
 
-add_cflags("-freport-bug")
-add_cxflags("-freport-bug")
+add_cflags("-freport-bug", "-save-temps")
+add_cxflags("-freport-bug", "-save-temps")
 
 if is_mode("debug") then
    set_symbols("debug")
    set_optimize("none")
-   add_defines('BUILD_MODE = "Debug')
+   add_defines('BUILD_MODE = "Debug"')
 end
 
 if is_mode("release") then
